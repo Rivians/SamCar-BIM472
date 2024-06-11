@@ -9,15 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{90
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A37A22AE-6B7D-444D-8ACD-88F5A0CEE634}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamCar472.Application", "Core\SamCar472.Application\SamCar472.Application.csproj", "{65A7C462-CD5B-4333-BD21-C5EABE9B95C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamCar472.Application", "Core\SamCar472.Application\SamCar472.Application.csproj", "{65A7C462-CD5B-4333-BD21-C5EABE9B95C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamCar472.Domain", "Core\SamCar472.Domain\SamCar472.Domain.csproj", "{17D66C36-DBE4-49DF-A3D9-F6BD554128B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamCar472.Domain", "Core\SamCar472.Domain\SamCar472.Domain.csproj", "{17D66C36-DBE4-49DF-A3D9-F6BD554128B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamCar472.WebUI", "FrontEnd\SamCar472.WebUI\SamCar472.WebUI.csproj", "{1359BC78-3B39-44BE-A3D8-A14D2CEE6EEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamCar472.WebUI", "FrontEnd\SamCar472.WebUI\SamCar472.WebUI.csproj", "{1359BC78-3B39-44BE-A3D8-A14D2CEE6EEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamCar472.Dto", "FrontEnd\SamCar472.Dto\SamCar472.Dto.csproj", "{1BDE8C04-6DE3-48B4-BB0B-CC063BD8552C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamCar472.Dto", "FrontEnd\SamCar472.Dto\SamCar472.Dto.csproj", "{1BDE8C04-6DE3-48B4-BB0B-CC063BD8552C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamCar472.Persistence", "Infrastructure\SamCar472.Persistence\SamCar472.Persistence.csproj", "{4BD65B39-2522-486A-8935-826A3DE2FF6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamCar472.Persistence", "Infrastructure\SamCar472.Persistence\SamCar472.Persistence.csproj", "{4BD65B39-2522-486A-8935-826A3DE2FF6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

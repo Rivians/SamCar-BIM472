@@ -1,0 +1,29 @@
+body{
+    background-color: #edf2f7;
+}
+
+.about-us{
+    margin-bottom: 50px;
+
+    .about-us-title{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .about-us-main{
+        
+        h4{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .about-us-image-side img{
+            border-radius: 20px;
+            height: 475px;
+            margin: auto;
+        }
+    }
+
+}

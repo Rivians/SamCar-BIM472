@@ -1,0 +1,38 @@
+﻿@using SamCar472.Application.Features.Mediator.Results.CommentResults
+@model List<GetCommentListByBlogQueryResult>
+
+<div class="comment">
+    <div class="comment-count">
+        <h2>@ViewBag.blogCount Yorum</h2>
+    </div>
+    <div class="row mb-3">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-1">
+                <div class="comment-user-image">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+            <div class="col-md-11">
+                <div class="comment-user-name">
+                    <h4>@item.Name</h4>
+                </div>
+                <div class="comment-date">
+                    <h6>@item.CreatedTime.ToShortDateString()</h6>
+                </div>
+                <div class="comment-description">
+                    <p>
+                        @item.Description
+                    </p>
+                </div>
+            </div>
+        }
+
+        @if(@ViewBag.blogCount == 0){
+            <h5 style="margin-left: 20px;">Bu bloğa henüz yorum yapılmamıştır.</h5>
+        }
+
+    </div>
+
+</div>

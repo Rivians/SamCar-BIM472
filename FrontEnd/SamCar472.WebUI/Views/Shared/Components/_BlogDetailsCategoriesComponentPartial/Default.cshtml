@@ -1,0 +1,15 @@
+﻿@using SamCar472.Application.Features.Mediator.Results.CategoryResults
+@model List<GetCategoryListQueryResult>
+
+@{
+    Layout = null;
+}
+
+<div class="categories">
+    <h5>Kategoriler</h5>
+    @foreach (var item in Model)
+    {
+        <a href="#"><h6>@item.CategoryName</h6></a>
+        <hr>
+    }
+</div>

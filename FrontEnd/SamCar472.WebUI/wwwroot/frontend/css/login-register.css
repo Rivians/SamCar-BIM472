@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    background-color: #f8f9fa;
+}
+
+.login-register-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-register-image-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;    
+}
+
+.login-register-image-container img{
+    padding: 0;
+    max-height: 100% !important;
+    min-width: 100% !important;
+    object-fit: cover !important;
+    height: 525px;
+    width: auto;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.itemss{
+    padding: 15px;
+    margin: 15px;
+    background-color: blueviolet;
+    border: 2px solid red;
+}
+
+.login-register-form{
+    margin-left: 0;
+    margin-right: 0;
+    
+    
+}
+
+.form-title{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form-password-forget{
+    text-align: center;
+
+    #p1{
+        margin-top: 15px;
+        margin-bottom: 4px;
+    }
+}
+
+.form-body-socialmedias{
+    text-align: center;
+
+    a{
+        margin-left: 5px;
+    }
+}
+
+.left-side{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.right-side{
+    padding: 30px;
+    margin: 0;
+    width: 100%;
+}
+
+.row{
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    
+}
+
+.both-side{
+    border-radius: 50px;
+}

@@ -1,0 +1,41 @@
+﻿@using SamCar472.Application.Features.Mediator.Results.BlogResults
+@model List<GetLast5BlogsWithAuthorsQueryResult>
+
+@{
+    Layout = null;
+}
+
+<div class="last-blogs">
+    <h5>Son Bloglar</h5>
+
+    @foreach (var item in Model)
+    {
+        <div class="last-blogs-item">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mini-cover-image">
+                        <a href="/Blog/BlogDetail/@item.BlogID">
+                            <img src="@item.CoverImageUrl">
+                        </a>                           
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="last-blogs-title">
+                        <h6>@item.Title</h6>
+                    </div>
+                    <div class="mini-info">
+                        <div>
+                            <i class="fa-solid fa-user" style="color: #35587e;"></i>
+                            <p>@item.AuthorName</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-calendar-days" style="color: #35587e;"></i>
+                            <p>@item.CreatedTime.ToShortDateString()</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    
+</div>

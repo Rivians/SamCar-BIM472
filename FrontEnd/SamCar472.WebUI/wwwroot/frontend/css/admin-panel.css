@@ -1,0 +1,86 @@
+
+/* 
+.navbar-login-register{
+    
+    .dropdown{
+        display: flex;
+        justify-content: center;
+    }
+} */
+
+.left-sidebar{  
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid black;
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: #53a8b6;
+
+        li{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            border-bottom: 1px solid black;
+
+            a{
+                padding: 10px 20px;
+                margin: 0;
+                display: block;
+                text-decoration: none;
+                color: white;
+            }
+
+            a:hover{
+                background-color: #5585b5;
+            }
+        }
+    }
+}
+
+.content{
+    margin: 0;
+    padding: 50px 80px 80px 80px !important;
+    height: 700px;
+
+    .main-content{
+        margin: 0;
+        padding: 15px 15px;
+
+        .admin-page-title{
+            text-align: center;
+            
+        }
+
+        .admin-profile-edit{
+
+            .form-side{
+                margin: 0;
+                padding: 0;
+
+                label{
+                    text-align: center;
+                }
+
+                .update-button{
+                    display: flex;
+
+                    a{
+                        justify-content: center;
+                    }
+                }
+            }
+    
+            .image-side{
+                margin: 0;
+                padding: 0;
+            }
+            
+        }
+
+    }
+}

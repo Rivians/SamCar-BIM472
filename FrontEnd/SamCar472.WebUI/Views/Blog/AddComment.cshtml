@@ -1,0 +1,21 @@
+﻿@using SamCar472.Application.Features.Mediator.Commands.Comment
+@model CreateCommentCommand
+
+<div class="leave-comment bg-light">
+    <h2 class="mb-5">Bir Yorum Bırakın</h2>
+    <form method="post">
+        <div class="form-group">
+            <label>Adınız</label>
+            <input type="text" asp-for="Name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Email Adresiniz</label>
+            <input type="email" asp-for="Email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Yorumunuz</label>
+            <textarea class="form-control" asp-for="Description" rows="2"></textarea>
+        </div>
+        <input class="btn btn-primary" type="submit">
+    </form>
+</div>

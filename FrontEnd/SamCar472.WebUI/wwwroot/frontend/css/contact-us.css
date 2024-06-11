@@ -1,0 +1,49 @@
+body{
+    background-color: #edf2f7;
+}
+
+.contact-us{
+    margin-top: 50px;
+    margin-bottom: 60px;
+
+    .left-side{
+        margin-bottom: 50px;        
+
+        i{
+            text-align: center;
+            font-size: 26px;
+        }
+
+        p{
+            color: gray;
+        }
+
+        strong{
+            color: black;
+        }
+
+        .info-cell{
+            padding: 30px;
+            border-radius: 20px;
+        }
+    }
+
+    .contact-us-title{
+        margin-bottom: 40px;
+        text-align: center;
+
+        h3{
+            color: #35587e;
+        }
+    }
+
+    .contact-us-form input{
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+
+    #submit-button{
+        margin-top: 20px;
+        padding: 20px;
+    }
+}
