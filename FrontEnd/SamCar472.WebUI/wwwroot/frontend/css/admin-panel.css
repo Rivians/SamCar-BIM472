@@ -50,6 +50,7 @@
     .main-content{
         margin: 0;
         padding: 15px 15px;
+        border: 2px solid white;
 
         .admin-page-title{
             text-align: center;

@@ -23,6 +23,11 @@ namespace SamCar472.Persistence.Repositories.BlogRepositories
             return _context.Blogs.Include(x => x.Author).ToList();
         }
 
+        public List<Blog> GetBlogListWithCategoryByUser(int appUserId)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Blog> GetLast5BlogsWithAuthors()
         {
             return _context.Blogs.Include(_x => _x.Author).OrderByDescending(x => x.CreatedTime).Take(5).ToList();

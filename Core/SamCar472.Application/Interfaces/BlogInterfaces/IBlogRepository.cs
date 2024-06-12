@@ -10,6 +10,7 @@ namespace SamCar472.Application.Interfaces.BlogInterfaces
     public interface IBlogRepository
     {
         public List<Blog> GetAllBlogsWithAuthors();  
-        public List<Blog> GetLast5BlogsWithAuthors();  
+        public List<Blog> GetLast5BlogsWithAuthors();
+        public List<Blog> GetBlogListWithCategoryByUser(int appUserId);
     }
 }

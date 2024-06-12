@@ -13,6 +13,7 @@ namespace SamCar472.Domain.Entities
         public string Description { get; set; }
         public string ShortDescription { get; set; }
         public string CoverImageUrl { get; set; }
+        public bool Status { get; set; }
         public DateTime CreatedTime { get; set; }
         public int AuthorID { get; set; }
         public Author Author { get; set; }

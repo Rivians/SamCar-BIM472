@@ -16,6 +16,7 @@ namespace SamCar472.WebUI.ViewComponents.BlogViewComponents
         {
             var values = await _mediator.Send(new GetCommentListByBlogQuery(id));
             var blogCount = await _mediator.Send(new GetCommentCountByBlogQuery(id));
+            ViewBag.blogId = id;
             ViewBag.BlogCount = blogCount.BlogCount;
 
             return View(values);

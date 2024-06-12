@@ -29,12 +29,6 @@ namespace SamCar472.WebUI.Controllers
             return View(values);
         }
 
-        [HttpGet]
-        public PartialViewResult AddComment(int id)
-        {
-            return PartialView();
-        }
-
         [HttpPost]
         public async Task<IActionResult> AddComment(CreateCommentCommand command)
         {

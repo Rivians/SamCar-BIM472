@@ -4,7 +4,7 @@ body{
 }
 
 .main-cover-image {
-    background: url('images2/cover-image.jpg');
+    background: url('~/frontend/images2/cover-image.jpg');
     /*background-image: url('images2/cover-image.jpg');*/
     background-position: center;
     background-size: cover;

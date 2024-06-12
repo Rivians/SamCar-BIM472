@@ -35,4 +35,24 @@
 
     </div>
 
+    <div class="leave-comment bg-light">
+        <h2 class="mb-5">Bir Yorum Bırakın</h2>
+        <form asp-controller="Blog" asp-action="AddComment" method="post">
+            <input type="hidden" name="BlogID" value="@ViewBag.blogId" />
+            <div class="form-group">
+                <label>Adınız</label>
+                <input type="text" name="Name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Email Adresiniz</label>
+                <input type="email" name="Email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Yorumunuz</label>
+                <textarea class="form-control" name="Description" rows="2"></textarea>
+            </div>
+            <input class="btn btn-primary" type="submit">
+        </form>
+    </div>
+
 </div>
