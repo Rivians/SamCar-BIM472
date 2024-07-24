@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using SamCar472.Application.Features.Mediator.Queries.AppUserQueries;
+using SamCar472.Application.Interfaces;
 using SamCar472.Domain.Entities;
 using SamCar472.Dto.LoginDtos;
 using System.Security.Claims;
@@ -29,9 +30,14 @@ namespace SamCar472.WebUI.Controllers
 
             if (values.IsExist)
             {
+                GetAppUserByUsernameQuery query2 = new GetAppUserByUsernameQuery();
+                query2.Username = query.Username;
+                var values2 = await _mediator.Send(query2);
+
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, query.Username )
+                    new Claim(ClaimTypes.Name, query.Username ),
+                    new Claim(ClaimTypes.Role, values.RoleName)
                 };
                 var userIdendity = new ClaimsIdentity(claims, "a");
                 ClaimsPrincipal principal = new ClaimsPrincipal(userIdendity);

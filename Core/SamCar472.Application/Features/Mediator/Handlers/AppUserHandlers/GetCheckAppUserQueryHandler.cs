@@ -29,6 +29,7 @@ namespace SamCar472.Application.Features.Mediator.Handlers.AppUserHandlers
                 data.IsExist = true;
                 data.Username = request.Username;
                 data.Password = request.Password;
+                data.RoleName = value.AppRole.AppRoleName; 
 
                 return data;
             }
@@ -38,7 +39,6 @@ namespace SamCar472.Application.Features.Mediator.Handlers.AppUserHandlers
 
                 return data;
             }
-           
         }
     }
 }

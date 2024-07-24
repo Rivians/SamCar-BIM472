@@ -1,4 +1,6 @@
-﻿
+﻿@using SamCar472.Application.Features.Mediator.Commands.ContactCommands
+@model CreateContactCommand
+
 @{
     Layout = null;
 }
@@ -127,11 +129,11 @@
                                 <h3>Sorunuz mu var ?</h3>
                             </div>
                             <div class="contact-us-form">
-                                <form>
-                                    <input type="text" class="form-control" id="form" placeholder="Adınız Soyadınız">
-                                    <input type="email" class="form-control" placeholder="Email Adresiniz">
-                                    <input type="text" class="form-control" placeholder="Konu">
-                                    <textarea class="form-control" rows="4" placeholder="Mesajınız"></textarea>
+                                <form method="post">
+                                    <input type="text" asp-for="Name" class="form-control" id="form" placeholder="Adınız ">
+                                    <input type="email" asp-for="Email" class="form-control" placeholder="Email Adresiniz">
+                                    <input type="text" asp-for="Subject" class="form-control" placeholder="Konu">
+                                    <textarea class="form-control" asp-for="Message" rows="4" placeholder="Mesajınız"></textarea>
                                     <input id="submit-button" type="submit" class="btn btn-primary" value="Mesajı Gönder">
                                 </form>
                             </div>
