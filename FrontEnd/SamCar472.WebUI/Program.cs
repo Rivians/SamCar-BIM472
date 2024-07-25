@@ -7,6 +7,8 @@ using SamCar472.Application.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using SamCar472.Application.Interfaces.CommentInterfaces;
 using SamCar472.Persistence.Repositories.CommentRepositories;
+using SamCar472.Application.Interfaces.AppUserInterfaces;
+using SamCar472.Persistence.Repositories.AppUserRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,7 @@ builder.Services.AddScoped<SamCarContext>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped(typeof(IBlogRepository), typeof(BlogRepository));
 builder.Services.AddScoped(typeof(ICommentRepository), typeof(CommentRepository));
+builder.Services.AddScoped(typeof(IAppUserRepository), typeof(AppUserRepository));
 
 builder.Services.AddControllersWithViews();
 
