@@ -17,5 +17,6 @@ namespace SamCar472.Domain.Entities
         public string? CoverImageUrl { get; set; }
         public int AppRoleID { get; set; }
         public AppRole AppRole { get; set; }
+        //public List<Blog> Blogs { get; set; }
     }
 }

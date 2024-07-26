@@ -65,32 +65,5 @@ namespace SamCar472.WebUI.Controllers
 
             return RedirectToAction("Profile");
         }
-
-        //[HttpGet]
-        //public async Task<IActionResult> BlogList(int id)
-        //{
-        //    return View();
-        //    //}
-
-        //    //[HttpGet]
-        //    //public async Task<IActionResult> BlogListAdmin()
-        //    //{
-        //    //    var username = User.Identity.Name;
-
-        //    //    var query = new GetUserInfosQuery();
-        //    //    query.Username = username;            
-        //    //    var user = await _mediator.Send(query);
-
-        //    //    if(user.AppRoleId == 1)
-        //    //    {
-        //    //        var values = _mediator.Send(new GetAllBlogsQuery());
-        //    //        return View(values);
-        //    //    }
-        //    //    else
-        //    //    {
-        //    //        return RedirectToAction("Profile");
-        //    //    }
-        //    //}
-        //}
     }
 }

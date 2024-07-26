@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SamCar472.Persistence.Context;
 
@@ -11,9 +12,11 @@ using SamCar472.Persistence.Context;
 namespace SamCar472.Persistence.Migrations
 {
     [DbContext(typeof(SamCarContext))]
-    partial class SamCarContextModelSnapshot : ModelSnapshot
+    [Migration("20240726162801_dsd")]
+    partial class dsd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,7 +47,7 @@ namespace SamCar472.Persistence.Migrations
 
                     b.HasKey("AboutID");
 
-                    b.ToTable("Abouts", (string)null);
+                    b.ToTable("Abouts");
                 });
 
             modelBuilder.Entity("SamCar472.Domain.Entities.AppRole", b =>
@@ -61,7 +64,7 @@ namespace SamCar472.Persistence.Migrations
 
                     b.HasKey("AppRoleID");
 
-                    b.ToTable("AppRoles", (string)null);
+                    b.ToTable("AppRoles");
                 });
 
             modelBuilder.Entity("SamCar472.Domain.Entities.AppUser", b =>
@@ -102,7 +105,7 @@ namespace SamCar472.Persistence.Migrations
 
                     b.HasIndex("AppRoleID");
 
-                    b.ToTable("AppUsers", (string)null);
+                    b.ToTable("AppUsers");
                 });
 
             modelBuilder.Entity("SamCar472.Domain.Entities.Author", b =>
@@ -125,13 +128,9 @@ namespace SamCar472.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("AuthorID");
 
-                    b.ToTable("Auhtors", (string)null);
+                    b.ToTable("Auhtorss");
                 });
 
             modelBuilder.Entity("SamCar472.Domain.Entities.Blog", b =>
@@ -176,7 +175,7 @@ namespace SamCar472.Persistence.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("Blogs", (string)null);
+                    b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("SamCar472.Domain.Entities.Category", b =>
@@ -193,7 +192,7 @@ namespace SamCar472.Persistence.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("SamCar472.Domain.Entities.Comment", b =>
@@ -226,7 +225,7 @@ namespace SamCar472.Persistence.Migrations
 
                     b.HasIndex("BlogID");
 
-                    b.ToTable("Comments", (string)null);
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("SamCar472.Domain.Entities.Contact", b =>
@@ -258,7 +257,7 @@ namespace SamCar472.Persistence.Migrations
 
                     b.HasKey("ContactID");
 
-                    b.ToTable("Contacts", (string)null);
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("SamCar472.Domain.Entities.AppUser", b =>

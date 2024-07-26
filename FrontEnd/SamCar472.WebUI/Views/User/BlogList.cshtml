@@ -1,5 +1,5 @@
 ﻿@using SamCar472.Application.Features.Mediator.Results.BlogResults
-@model List<GetAllBlogsQueryResult>
+@model List<GetUserBlogListByUsernameQueryResult>
 
 @{
     Layout = null;
@@ -59,30 +59,27 @@
     <div class="row">
         <div class="left-sidebar col-md-2">
             <ul>
-                <li><a href="/Admin/Profile/">Profil Bilgileri</a></li>
-                <li><a href="/Admin/BlogList/">Tüm Bloglar</a></li>
-                <li><a href="/Admin/UserList/">Tüm Kullanıcılar</a></li>
-                <li><a href="/Admin/CommentList/">Tüm Yorumlar</a></li>
-                <li><a href="/Admin/AwaitingBlogs/">Onay Bekleyen Bloglar</a></li>
+                <li><a href="/User/Profile/">Profil Bilgilerim</a></li>
+                <li><a href="/User/BlogList/">Bloglarım</a></li>
+                <li><a href="/User/CommentList/">Gelen Yorumlar</a></li>
             </ul>
         </div>
 
         <div class="content col-md-10 border">
             <div class="main-content border">
                 <div class="admin-page-title">
-                    <h5>Kullanıcı Blog Yönetim Sayfası</h5>
+                    <h5>Kullanıcı Blog Yönetim Paneli</h5>
                 </div>
-                <div class="admin-blog-table">                    
+                <div class="admin-blog-table">
                     <table class="table table-hover">
                         <thead class="thead-light">
                             <tr>
                                 <th>#</th>
+                                <th>Blog Resmi</th>
                                 <th>Blog Adı</th>
-                                @*<th>Yazar</th>*@
+                                <th>Kategori</th>
+                                <th>Yorum Sayısı</th>
                                 <th>Eklenme Tarihi</th>
-                                <th>Durumu</th>
-                                <th>Pasif Yap</th>
-                                <th>Aktif Yap</th>
                                 <th>Güncelle</th>
                                 <th>Sil</th>
                             </tr>
@@ -93,25 +90,24 @@
                                 count++;
                                 <tr>
                                     <td>@count</td>
-                                    <td>@item.BlogName</td>
-                                    @* <td>@item.Author</td> *@
-                                    <td>@item.CreatedTime</td>
-                                    <td>@item.BlogStatus</td>
-                                    <td><a href="#" class="btn btn-warning"> Pasif Yap</a></td>
-                                    <td><a href="#" class="btn btn-success"> Aktif Yap</a></td>
-                                    <td><a href="#" class="btn btn-info"> Güncelle </a></td>
-                                    <td><a href="/Admin/RemoveBlog/@item.BlogID" class="btn btn-danger"> Sil </a></td>
+                                    <td>@item.CoverImageUrl</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.CategoryName</td>
+                                    <td>@item.CommentCount</td>
+                                    <td>@item.CreatedTime</td>              
+                                    <td><a href="/User/UpdateBlog/@item.BlogID" class="btn btn-info"> Güncelle </a></td>
+                                    <td><a href="/User/RemoveBlog/@item.BlogID" class="btn btn-danger"> Sil </a></td>
                                 </tr>
-                            }                            
+                            }
                         </tbody>
                     </table>
                     <div class="add-blog-button">
-                        <a href="#" class="btn btn-primary">Blog Ekle</a>
+                        <a href="/User/AddBlog/" class="btn btn-primary">Blog Ekle</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </body>
 </html>

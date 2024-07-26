@@ -36,7 +36,7 @@
                         <a href="home.html"><img src="/frontend/images2/rent-a-car-logo2.png" width="100%"></a>
                         <a href="home.html"><p><b>SAM CAR</b></p></a>
                     </div>
-                    <div class="navbar-main col-md-6"></div>  
+                    <div class="navbar-main col-md-6"></div>
                     <div class="navbar-login-register col-md-3">
                         <div class="dropdown">
                             <button style="color:white" type="button" class="btn dropdown-toggle" data-toggle="dropdown">
@@ -44,9 +44,9 @@
                                 <strong style="color: white;">@User.Identity.Name</strong>
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">Profilimi Göster</a>
-                              <a class="dropdown-item" href="/Default/Index/">Siteye Git</a>
-                              <a class="dropdown-item" href="/Logout/Index/">Çıkış Yap</a>
+                                <a class="dropdown-item" href="/User/Profile/">Profilimi Göster</a>
+                                <a class="dropdown-item" href="/Default/Index/">Siteye Git</a>
+                                <a class="dropdown-item" href="/Logout/Index/">Çıkış Yap</a>
                             </div>
                         </div>
                     </div>
@@ -58,17 +58,15 @@
     <div class="row">
         <div class="left-sidebar col-md-2">
             <ul>
-                <li><a href="/Admin/Profile/">Profil Bilgileri</a></li>
-                <li><a href="/Admin/BlogList/">Tüm Bloglar</a></li>
-                <li><a href="/Admin/UserList/">Tüm Kullanıcılar</a></li>
-                <li><a href="/Admin/CommentList/">Tüm Yorumlar</a></li>
-                <li><a href="/Admin/AwaitingBlogs/">Onay Bekleyen Bloglar</a></li>
+                <li><a href="/User/Profile/">Profil Bilgilerim</a></li>
+                <li><a href="/User/BlogList/">Bloglarım</a></li>
+                <li><a href="/User/CommentList/">Gelen Yorumlar</a></li>
             </ul>
         </div>
         <div class="content col-md-10">
             <div class="main-content" style="padding:20px; background-color: #edf2f7; border-radius:20px">
                 <div class="admin-page-title">
-                    <h5>Admin Profil Sayfası</h5>
+                    <h5>Kullanıcı Profil Sayfası</h5>
                 </div>
                 <div class="admin-profile-edit mt-4">
                     <div class="row">
@@ -98,7 +96,7 @@
                                     <a href="/Admin/UpdateProfile/@Model.AppUserId" class="btn btn-primary">
                                         Düzenle
                                     </a>
-                                </div>                                
+                                </div>
                             </form>
                         </div>
                         <div class="col-md-4 image-side">
@@ -112,6 +110,6 @@
         </div>
     </div>
 
-    
+
 </body>
 </html>
