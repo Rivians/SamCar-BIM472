@@ -26,14 +26,14 @@ namespace SamCar472.WebUI.Controllers
         public async Task<IActionResult> Index(CreateContactCommand command)
         {
             MimeMessage mimeMessage = new MimeMessage();
-            MailboxAddress mailboxAddressFrom = new MailboxAddress("SamCar", command.Email );
-            MailboxAddress mailboxAddressTo = new MailboxAddress("User", "nexorevolutionn@gmail.com");
+            MailboxAddress mailboxAddressFrom = new MailboxAddress(command.Name, command.Email );
+            MailboxAddress mailboxAddressTo = new MailboxAddress("Samcarr", "nexorevolutionn@gmail.com");
 
             mimeMessage.From.Add(mailboxAddressFrom);
             mimeMessage.To.Add(mailboxAddressTo);
 
             var bodyBuilder = new BodyBuilder();
-            bodyBuilder.TextBody = command.Name + "tarafından bir mesajınız var";
+            bodyBuilder.TextBody = command.Name + "tarafından bir mesajınız var";            
             mimeMessage.Body = bodyBuilder.ToMessageBody();
 
             mimeMessage.Subject = command.Subject;

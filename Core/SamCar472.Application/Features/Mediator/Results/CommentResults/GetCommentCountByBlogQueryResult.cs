@@ -8,6 +8,6 @@ namespace SamCar472.Application.Features.Mediator.Results.CommentResults
 {
     public class GetCommentCountByBlogQueryResult
     {
-        public int BlogCount { get; set; }
+        public int CommentCount { get; set; }
     }
 }

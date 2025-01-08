@@ -23,6 +23,16 @@ namespace SamCar472.Persistence.Repositories.CommentRepositories
             return _context.Comments.Where(x => x.BlogID == id).Count();
         }
 
+        public List<Comment> GetCommentListByAppUser()
+        {
+            throw new NotImplementedException();
+        }
+
+        //public List<Comment> GetCommentListByAppUser()
+        //{
+        //    var values = _context.Comments.Include(x => x.Blog).ThenInclude(x => x)
+        //}
+
         public List<Comment> GetCommentListByBlog(int id)
         {
             return _context.Comments.Where(x => x.BlogID == id).ToList();

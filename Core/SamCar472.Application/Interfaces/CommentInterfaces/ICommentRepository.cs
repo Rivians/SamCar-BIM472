@@ -11,5 +11,6 @@ namespace SamCar472.Application.Interfaces.CommentInterfaces
     {
         public List<Comment> GetCommentListByBlog(int id);
         public int GetCommentCountByBlog(int id);
+        public List<Comment> GetCommentListByAppUser();
     }
 }

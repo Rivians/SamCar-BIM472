@@ -1,5 +1,5 @@
-﻿@using SamCar472.Application.Features.Mediator.Results.AppUserResults
-@model GetUserInfosQueryResult
+﻿@using SamCar472.Application.Features.Mediator.Results.BlogResults
+@model GetBlogByIdQueryResult
 
 @{
     Layout = null;
@@ -25,9 +25,9 @@
     <link rel="stylesheet" href="/frontend/css/fonts.css">
     <link rel="stylesheet" href="/frontend/css/navbar.css">
     <link rel="stylesheet" href="/frontend/css/admin-panel.css">
-
 </head>
 <body>
+
     <header>
         <nav>
             <div class="navbarrr">
@@ -44,7 +44,7 @@
                                 <strong style="color: white;">@User.Identity.Name</strong>
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="/User/Profile/">Profilimi Göster</a>
+                                <a class="dropdown-item" href="#">Profilimi Göster</a>
                                 <a class="dropdown-item" href="/Default/Index/">Siteye Git</a>
                                 <a class="dropdown-item" href="/Logout/Index/">Çıkış Yap</a>
                             </div>
@@ -63,53 +63,37 @@
                 <li><a href="/User/CommentList/">Gelen Yorumlar</a></li>
             </ul>
         </div>
-        <div class="content col-md-10">
-            <div class="main-content" style="padding:20px; background-color: #edf2f7; border-radius:20px">
+
+        <div class="content col-md-10 ">
+            <div class="main-content">
                 <div class="admin-page-title">
-                    <h5>Kullanıcı Profil Sayfası</h5>
+                    <h5>Blog Ekleme Sayfası</h5>
                 </div>
-                <div class="admin-profile-edit mt-4">
-                    <div class="row">
-                        <div class="col-md-8 form-side">
-                            <form method="post">
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label" for="">Ad</label>
-                                    <input type="text" class="form-control col-md-5" name="" id="" value="@Model.Name" readonly>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label" for="">Soyad</label>
-                                    <input type="text" class="form-control col-md-5" name="" id="" value="@Model.Surname" readonly>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label" for="">Kullanıcı Adı</label>
-                                    <input type="text" class="form-control col-md-5" name="" id="" value="@Model.Username" readonly>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label" for="">Email</label>
-                                    <input type="email" class="form-control col-md-5" name="" id="" value="@Model.Email" readonly>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label" for="">Şifre</label>
-                                    <input type="text" class="form-control col-md-5" name="" id="" value="@Model.Password" readonly>
-                                </div>
-                                <div class="update-button">
-                                    <a href="/User/UpdateProfile/@Model.AppUserId" class="btn btn-primary">
-                                        Düzenle
-                                    </a>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-md-4 image-side">
-                            <div class="image">
-                                <img src="@Model.CoverImageUrl" alt="">
-                            </div>
-                        </div>
-                    </div>
+                <div class="update-blog-form">
+                    <form method="post">
+                        <label class="form-control" style="color:black; font-size:large">Blog Başlığı</label>
+                        <input type="text" asp-for="Title" class="form-control" id="form" placeholder="Başlık">
+                        </br>
+                        <label class="form-control" style="color:black; font-size:large">Kısa Açıklama</label>
+                        <input type="text" asp-for="ShortDescription" class="form-control" placeholder="Kısa Açıklama">
+                        </br>
+                        <label class="form-control" style="color:black; font-size:large">Blog Yazısı</label>
+                        <textarea class="form-control" asp-for="@Model.Description" rows="7"></textarea>
+                        </br>
+                        @*                         <label class="form-control" style="color:black; font-size:large">Blog Kategorisi</label>
+                        <input type="text" name="categoryName" value="@Model." class="form-control" placeholder="Kısa Açıklama">
+                        </br> *@
+                        <label class="form-control" style="color:black; font-size:large">Resim Dosya Adresi</label>
+                        <input type="text" asp-for="CoverImageUrl" class="form-control" placeholder="Resim dosya adresi">
+                        </br>
+                        <input id="submit-button" type="submit" class="btn btn-primary" value="Bloğu Ekle">
+                    </form>
                 </div>
             </div>
+
         </div>
     </div>
-
+    </div>
 
 </body>
 </html>

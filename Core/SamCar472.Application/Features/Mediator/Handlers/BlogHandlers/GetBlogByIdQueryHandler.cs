@@ -27,7 +27,9 @@ namespace SamCar472.Application.Features.Mediator.Handlers.BlogHandlers
                 BlogID = value.BlogID,
                 Title = value.Title,
                 Description = value.Description,
-                CoverImageUrl = value.CoverImageUrl
+                ShortDescription = value.ShortDescription,
+                CoverImageUrl = value.CoverImageUrl,
+                CreatedTime = value.CreatedTime,                                
             };
         }
     }

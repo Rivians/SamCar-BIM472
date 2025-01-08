@@ -1,12 +1,14 @@
-﻿@using SamCar472.Application.Features.Mediator.Results.AppUserResults
-@model GetUserInfosQueryResult
+﻿@using SamCar472.Application.Features.Mediator.Results.CommentResults
+@model List<GetCommentListByBlogQueryResult>
 
 @{
     Layout = null;
+    int count = 0;
 }
 
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +27,6 @@
     <link rel="stylesheet" href="/frontend/css/fonts.css">
     <link rel="stylesheet" href="/frontend/css/navbar.css">
     <link rel="stylesheet" href="/frontend/css/admin-panel.css">
-
 </head>
 <body>
     <header>
@@ -44,7 +45,7 @@
                                 <strong style="color: white;">@User.Identity.Name</strong>
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="/User/Profile/">Profilimi Göster</a>
+                                <a class="dropdown-item" href="#">Profilimi Göster</a>
                                 <a class="dropdown-item" href="/Default/Index/">Siteye Git</a>
                                 <a class="dropdown-item" href="/Logout/Index/">Çıkış Yap</a>
                             </div>
@@ -63,53 +64,39 @@
                 <li><a href="/User/CommentList/">Gelen Yorumlar</a></li>
             </ul>
         </div>
-        <div class="content col-md-10">
-            <div class="main-content" style="padding:20px; background-color: #edf2f7; border-radius:20px">
+
+        <div class="content col-md-10 border">
+            <div class="main-content border">
                 <div class="admin-page-title">
-                    <h5>Kullanıcı Profil Sayfası</h5>
-                </div>
-                <div class="admin-profile-edit mt-4">
-                    <div class="row">
-                        <div class="col-md-8 form-side">
-                            <form method="post">
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label" for="">Ad</label>
-                                    <input type="text" class="form-control col-md-5" name="" id="" value="@Model.Name" readonly>
+                    <h5>Blog Yorumları</h5>
+                </div>               
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yorum Listesi - @ViewBag.CommentCount Yorum</h4>
+                    <p class="card-subtitle mb-4">
+                        Bloglarla ilgili o bloğa yapılmış olan yorum listesini bu sayfadan görebilirsiniz. İlgili yorumları kaldırabilir ya da tekrar aktif hale getirebilrsiniz. Bunun için yorumların altında yer alan butonları kullanabilirsiniz.
+                    </p>
+                    @foreach (var item in Model)
+                    {
+                        count++;
+                        <div class="col-md-12">
+                            <div class="card">
+                                <h5 class="card-header">Yorum - @count</h5>
+                                <div class="card-body">
+                                    <h4 class="card-title">@item.Name</h4>
+                                    <p class="card-text">
+                                        @item.Description
+                                    </p>
+                                    <a href="/User/RemoveComment/@item.CommentID" class="btn btn-danger waves-effect waves-light">Yorumu Kaldır</a>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label" for="">Soyad</label>
-                                    <input type="text" class="form-control col-md-5" name="" id="" value="@Model.Surname" readonly>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label" for="">Kullanıcı Adı</label>
-                                    <input type="text" class="form-control col-md-5" name="" id="" value="@Model.Username" readonly>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label" for="">Email</label>
-                                    <input type="email" class="form-control col-md-5" name="" id="" value="@Model.Email" readonly>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-4 col-form-label" for="">Şifre</label>
-                                    <input type="text" class="form-control col-md-5" name="" id="" value="@Model.Password" readonly>
-                                </div>
-                                <div class="update-button">
-                                    <a href="/User/UpdateProfile/@Model.AppUserId" class="btn btn-primary">
-                                        Düzenle
-                                    </a>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-md-4 image-side">
-                            <div class="image">
-                                <img src="@Model.CoverImageUrl" alt="">
                             </div>
                         </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>
     </div>
-
-
 </body>
 </html>

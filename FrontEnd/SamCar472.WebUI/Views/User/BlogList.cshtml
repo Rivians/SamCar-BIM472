@@ -80,6 +80,7 @@
                                 <th>Kategori</th>
                                 <th>Yorum Sayısı</th>
                                 <th>Eklenme Tarihi</th>
+                                <th>Yorumlar</th>
                                 <th>Güncelle</th>
                                 <th>Sil</th>
                             </tr>
@@ -95,6 +96,7 @@
                                     <td>@item.CategoryName</td>
                                     <td>@item.CommentCount</td>
                                     <td>@item.CreatedTime</td>              
+                                    <td><a href="/User/BlogComments/@item.BlogID" class="btn btn-info"> Yorumlar </a></td>              
                                     <td><a href="/User/UpdateBlog/@item.BlogID" class="btn btn-info"> Güncelle </a></td>
                                     <td><a href="/User/RemoveBlog/@item.BlogID" class="btn btn-danger"> Sil </a></td>
                                 </tr>

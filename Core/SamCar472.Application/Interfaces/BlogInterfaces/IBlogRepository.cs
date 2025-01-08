@@ -14,5 +14,6 @@ namespace SamCar472.Application.Interfaces.BlogInterfaces
         public List<Blog> GetLast5BlogsWithAuthors();
         public List<Blog> GetBlogListWithCategoryByUser(int appUserId);
         public List<UserBlogListDto> GetUserBlogListByAuthorUsernameWithCommentCountAndCategory(string username);
+        //public Blog GetBlogByIdWithCategory(int blogId);
     }
 }

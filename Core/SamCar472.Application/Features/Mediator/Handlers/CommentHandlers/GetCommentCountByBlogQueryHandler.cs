@@ -23,7 +23,7 @@ namespace SamCar472.Application.Features.Mediator.Handlers.CommentHandlers
             var value = _repository.GetCommentCountByBlog(request.Id);
             return new GetCommentCountByBlogQueryResult
             {
-                BlogCount = value
+                CommentCount = value
             };
         }
     }

@@ -8,6 +8,7 @@ namespace SamCar472.Domain.Entities
 {
     public class Blog
     {
+        // her blog 1 authot ile baglı ama bu kullanılmamalı -- onun yerine 1 blog appUser ile eslesmeli
         public int BlogID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }

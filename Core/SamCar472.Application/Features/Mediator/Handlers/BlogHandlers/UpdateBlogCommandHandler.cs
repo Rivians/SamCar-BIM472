@@ -18,9 +18,15 @@ namespace SamCar472.Application.Features.Mediator.Handlers.BlogHandlers
             _repository = repository;
         }
 
-        public Task Handle(UpdateBlogCommand request, CancellationToken cancellationToken)
+        public async Task Handle(UpdateBlogCommand request, CancellationToken cancellationToken)
         {
-            
+            var values = await _repository.GetByIdAsync(request.Id);
+            values.Title = request.Title;
+            values.Description = request.Description;
+            values.ShortDescription = request.ShortDescription;
+            values.CoverImageUrl = request.CoverImageUrl;
+            //values.Category.Name = request.CategoryName;
+            await _repository.UpdateAsync(values);
         }
     }
 }
